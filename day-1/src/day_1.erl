@@ -30,7 +30,11 @@ two_sum_equal_2020([H1,H2|T]) ->
       end
   end.
 
+<<<<<<< Updated upstream
 two_sum_check_list(IntList) ->
+=======
+check_list(IntList) ->
+>>>>>>> Stashed changes
   case two_sum_equal_2020(IntList) of
     {true, Ans} ->
       Ans;

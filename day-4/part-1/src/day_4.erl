@@ -19,8 +19,6 @@ open_file(FilePath) ->
   Device.
 
 record_element([Key, Val], Passport) ->
-%%  erlang:display(Key),
-%%  erlang:display(Val),
   case Key of
     <<"byr">> ->
       Passport#passport{birth_year = Val};
@@ -43,8 +41,6 @@ record_element([Key, Val], Passport) ->
 
 scan_passport(Elements, Passport) ->
   [H|T] = Elements,
-%%  erlang:display(H),
-%%  erlang:display(T),
   case binary:split(H, <<":">>) of
     [Key, Val] ->
       NewPassport = record_element([Key, Val], Passport),
